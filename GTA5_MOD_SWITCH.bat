@@ -1,25 +1,28 @@
 @echo off
 
-rem 初期化
+rem init
 SET INPUT=
 
 
-echo GTA5のMODを切り替えるスクリプトです。
+echo GTA5_MOD_SWITCH script
 
-echo MODを無効にする場合は「0」を入力、有効にする場合は「1」を入力してください。
+echo MODS Disable 0 / Enable 1
 
 SET /p INPUT=
 
+
+rem check input disable
 if %INPUT%==0 goto DISABLE_MOD
 
 :DISABLE_MOD
-echo MODを無効にします。
+echo disabled
+pause
 
 
+
+rem check input enable
 if %INPUT%==1 goto ENABLE_MOD
 
 :ENABLE_MOD
-echo MODを有効にします。
-
-
+echo enabled
 pause
